@@ -1,0 +1,37 @@
+#include <iostream>
+#define p 100
+using namespace::std;
+
+struct ipk {
+double nilai[5];
+};
+ipk ip;
+double input(string text){
+    cout<<"|| Masukan nilai  "<<text<<" :";cin>>ip.nilai[4];
+ return ip.nilai[4];
+}
+void grade (double hasil){
+if(hasil>=101){cout<<endl;cout<<" Maaf nilai yang anda masukan berlebihan ";}
+else if(hasil>=81){cout<<endl;cout<<" Grade Nilai A";}
+else if(hasil>=61){cout<<endl;cout<<" Grade Nilai B";}
+else if(hasil>=41){cout<<endl;cout<<" Grade Nilai C";}
+else if(hasil>=21){cout<<endl;cout<<" Grade Nilai D";}
+else if(hasil>=0){cout<<endl;cout<<" Grade Nilai E";}
+}
+main(){
+    double hasil;
+    string nHuruf;
+      cout<<"|| =======Isi Dengan Benar=====";cout<<endl;
+ip.nilai[0] = input("UTS");
+ip.nilai[1]= input("UAS");
+ip.nilai[2] = input("Tugas");
+ip.nilai[3] = input("Absen");
+hasil=(ip.nilai[0]*20/p)+(ip.nilai[1]*30/p)+(ip.nilai[2]*35/p)+(ip.nilai[3]*15/p);
+    cout<<"|| ====== Hasil Akhir ======";
+    cout<<"\n|| Nilai UTS     : ";cout<<ip.nilai[0];
+    cout<<"\n|| Nilai UAS     : ";cout<<ip.nilai[1];
+    cout<<"\n|| Nilai Tugas   : ";cout<<ip.nilai[2];
+    cout<<"\n|| Nilai Absen   : ";cout<<ip.nilai[3];
+    cout<<"\n|| Total nilai   : ";cout<<hasil;
+grade(hasil);
+}
